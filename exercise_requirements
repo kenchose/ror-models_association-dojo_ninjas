@@ -1,0 +1,12 @@
+6. 
+    a. Dojo.find(1).destroy or to delete all do Dojo.delete_all
+    b. dojo4 = Dojo.new
+        dojo4.name = "Name"
+        dojo4.city="City"
+        dojo4.state="State"
+        dojo4.save
+    d.Ninja.create(first_name:"Emily", last_name:"Phillips", dojo:Dojo.first) //do not use Dojo.find(1) to prevent from having a bad database. If there is no Dojo with ID 1, active record can still create a ninja assigned to dojo 1 even if thre is no dojo with id 1
+7. Dojo.first.ninjas
+8. Dojo.second.ninjas.order("first_name DESC")
+9. has_many :ninjas, dependent: :destroy 
+    Dependent controls what happens to the associated objects
